@@ -1,0 +1,129 @@
+.row,
+.col-lg-4,
+.col-lg-6,
+.col-md-12,
+.col-sm-12,
+.col-lg-12 {
+  margin: 0;
+  padding: 0;
+}
+
+/* tblContainer Styles */
+
+#tblContainer {
+  background: rgb(208, 222, 243);
+  width: 84%;
+  height: 92vh;
+  padding: 0.5% 2.5%;
+}
+
+.display-3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+table,
+tbody,
+tr,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  padding: 0;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px 15px;
+}
+
+tbody tr td {
+  width: 15%;
+  height: 35px;
+  border: 1px solid rgb(182, 178, 178);
+  padding: 0.5%;
+}
+
+tbody tr td input[type="text"] {
+  width: 100%;
+}
+
+tbody tr td input[type="Number"] {
+  width: 100%;
+}
+
+.form-row {
+  border: 1px solid lighgrey;
+}
+
+#selectMdl,
+#selectTypeSch,
+#selectSch {
+  width: 100%;
+  height: 100%;
+  /* background: rgb(124, 152, 238); */
+  /* color: white; */
+}
+
+.heading {
+  padding: 0.5%;
+  /* background: rgb(2, 117, 216); */
+  background: #007bff;
+  color: white;
+}
+
+.bankHeading {
+  position: relative;
+  margin-left: 5px;
+  font-size: 1.25rem;
+  background: #007bff;
+  /* background: #5bc0de; */
+  color: white;
+  padding: 10px;
+}
+
+.bankHeading:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(94, 106, 143, 0);
+  border-top-color: #007bff;
+  border-width: 15px;
+  margin-left: -15px;
+}
+
+#btnSubmit {
+  width: 25%;
+  margin: 0 auto;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+  .displayCols {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
+
+@media (max-width: 1199.98px) {
+}
