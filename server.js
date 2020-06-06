@@ -6,13 +6,13 @@ const cors = require('cors')
 
 
 const users = require('./routes/api/users')
-const profile = require('./routes/api/profile')
-const posts = require('./routes/api/posts')
-const todoRoutes = require('./routes/todo/todo')
+// const profile = require('./routes/api/profile')
+// const posts = require('./routes/api/posts')
+// const todoRoutes = require('./routes/todo/todo')
 const connectionRoutes = require('./routes/connection')
-const teacherRoutes = require('./routes/teachers/teachers')
-const esrRoutes = require('./routes/esrentry/employeeDetails');
-const photoUploadRoutes = require('./routes/esrentry/photouploadDetails')
+// const teacherRoutes = require('./routes/teachers/teachers')
+// const esrRoutes = require('./routes/esrentry/employeeDetails');
+// const photoUploadRoutes = require('./routes/esrentry/photouploadDetails')
 const naduneduRoutes = require('./routes/nadunedu');
 
 const app = express();
@@ -43,13 +43,13 @@ require('./config/passport')(passport)
 // use routes
 
 app.use('/api/users', users)
-app.use('/api/profile', profile)
-app.use('/api/posts', posts)
-app.use(todoRoutes)
+// app.use('/api/profile', profile)
+// app.use('/api/posts', posts)
+// app.use(todoRoutes)
 app.use(connectionRoutes)
-app.use(teacherRoutes)
-app.use(esrRoutes)
-app.use(photoUploadRoutes)
+// app.use(teacherRoutes)
+// app.use(esrRoutes)
+// app.use(photoUploadRoutes)
 app.use(naduneduRoutes)
 
 const port = process.env.port || 5000;
