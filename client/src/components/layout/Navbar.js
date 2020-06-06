@@ -39,9 +39,9 @@ class Navbar extends Component {
             <li className="nav-item">
               <Link className="nav-link" to="/login">Login</Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/register">Register</Link>
-            </li>
+            </li> */}
         </ul>
         
           </div>
@@ -50,7 +50,7 @@ class Navbar extends Component {
         return (
             <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                 <div className="container">
-                <Link className="navbar-brand" to="/">e-Service Register</Link>
+                <Link className="navbar-brand" to="/">Nadu-Nedu WG</Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -65,26 +65,16 @@ class Navbar extends Component {
           //     <Link className="nav-link" to="/dashboard">Dashboard</Link>
           // </li>
           <li className="nav-item">
-          <Link className="nav-link" to="/teacher/addTeacher">Add New</Link>
+          <Link className="nav-link" to="/nadunedu">Add New</Link>
         </li>) : null}
-          <li className="nav-item">
-            <a className="nav-link" href="/about">About</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/contact">Contact</a>
-          </li>
+          
           <li className="nav-item">
             <Link className="nav-link" to="/report">Report</Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/uploadphotos">Upload Photos</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/addressdetails">Address</Link>
-          </li>
-          <li className="nav-item">
+          
+          {/* <li className="nav-item">
             <Link className="nav-link" to="/nadunedu">Nadu-Nedu</Link>
-          </li>
+          </li> */}
           
         
         </ul>

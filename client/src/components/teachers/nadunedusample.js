@@ -74,8 +74,8 @@ constructor(props){
     onnaduneduSubmit(e){
         e.preventDefault()
         
-        alert('form submitted')
-        alert(this.state.dot)
+        //alert(' submitted')
+        //alert(this.state.dot)
 
     const newNaduneduEntry = {
 
@@ -117,9 +117,67 @@ constructor(props){
 
     axios.post('http://localhost:5000/addNewEntry', newNaduneduEntry)
         .then(res=>{
-            console.log(res.data)
+            //console.log(res.data)
             this.setState({completed: true})
             this.setState({mandal: ''})
+            this.setState({school: ''})
+            this.setState({funds_estimated: ''})
+            this.setState({funds_receivedOne: ''})
+            this.setState({funds_receivedTwo: ''})
+            this.setState({funds_expenditure: ''})
+            this.setState({cement_company: ''})
+            this.setState({cement_required: ''})
+            this.setState({cement_indent_placed: ''})
+            this.setState({cement_received: ''})
+            this.setState({sand_required: ''})
+            this.setState({sand_indent_placed: ''})
+            this.setState({sand_received: ''})
+            this.setState({metal_required: ''})
+            this.setState({metal_received: ''})
+            this.setState({steel_required: ''})
+            this.setState({steel_received: ''})
+            this.setState({cement_bricks_req: ''})
+            this.setState({cement_bricks_rec: ''})
+            this.setState({cley_bricks_req: ''})
+            this.setState({cley_bricks_rec: ''})
+            this.setState({wb_req: ''})
+            this.setState({wb_upload: ''})
+            this.setState({wb_rec: ''})
+            this.setState({urinals_req: ''})
+            this.setState({urinals_upload: ''})
+            this.setState({urinals_rec: ''})
+            this.setState({wc_req: ''})
+            this.setState({wc_upload: ''})
+            this.setState({wc_rec: ''})
+            this.setState({fans_req: ''})
+            this.setState({fans_upload: ''})
+            this.setState({fans_rec: ''})
+            this.setState({db_class_1_3_req: ''})
+            this.setState({db_class_1_3_upload: ''})
+            this.setState({db_class_1_3_rec: ''})
+            this.setState({db_class_4_7_req: ''})
+            this.setState({db_class_1_3_upload: ''})
+            this.setState({db_class_1_3_rec: ''})
+            this.setState({db_class_7_10_req: ''})
+            this.setState({db_class_7_10_upload: ''})
+            this.setState({db_class_7_10_rec: ''})
+            this.setState({tables_req: ''})
+            this.setState({tables_upload: ''})
+            this.setState({tables_rec: ''})
+            this.setState({chairs_req: ''})
+            this.setState({chairs_upload: ''})
+            this.setState({chairs_rec: ''})
+            this.setState({almirah_req: ''})
+            this.setState({almirah_upload: ''})
+            this.setState({almirah_rec: ''})
+            this.setState({chalk_board_req: ''})
+            this.setState({chalk_board_upload: ''})
+            this.setState({chalk_board_rec: ''})
+            this.setState({tv_req: ''})
+            this.setState({tv_upload: ''})
+            this.setState({tv_rec: ''})
+            alert('Record Inserted Suceessfully!!!')
+            
         })
         .catch(err=>console.log(err))
     }
@@ -148,7 +206,7 @@ constructor(props){
                       
                     <div className="form-group col-md-2">
                         <label htmlFor="inputname">Mandal</label>
-                        <select id='manal' name='mandal' className="form-control" onChange={this.onMandalChange} value={this.state.mandal}>
+                        <select id='manal' name='mandal' className="form-control" onChange={this.onMandalChange} value={this.state.mandal} required>
                             <option value="">Select Mandal</option>
                             {this.state.mandals.map(mandal=>(
                                 <option key={mandal.mandal} value={mandal.mandal}>{mandal.mandal}</option>
@@ -157,7 +215,7 @@ constructor(props){
                     </div>
                     <div className="form-group col-md-2">
                         <label htmlFor="inputsurname">School</label>
-                        <select id='school' name='school' class="form-control" value={this.state.mandal} onChange={this.onChange}>
+                        <select id='school' name='school' class="form-control" value={this.state.school} onChange={this.onChange} required>
                             <option value="">Select School</option>
                             {this.state.schools.map(school=>(
                                 <option key={school.schoolname} value={school.schoolname}>{school.schoolname}</option>
@@ -175,6 +233,7 @@ constructor(props){
                     name='funds_estimated'
                     value={this.state.funds_estimated}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-2">
@@ -183,6 +242,7 @@ constructor(props){
                     name='funds_receivedOne'
                     value={this.state.funds_receivedOne}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-2">
@@ -191,6 +251,7 @@ constructor(props){
                         name='funds_receivedTwo'
                         value={this.state.funds_receivedTwo}
                         onChange={this.onChange}
+                        required
                     /> 
                     </div>
                     <div className="form-group col-md-2">
@@ -199,6 +260,7 @@ constructor(props){
                         name='funds_expenditure'
                         value={this.state.funds_expenditure}
                         onChange={this.onChange}
+                        required
                     /> 
                     </div>
                     </div>
@@ -210,28 +272,31 @@ constructor(props){
                                 <tr>
                                     <td class="heading">Company</td>
                                     <td>
-                                        <select class="form-control" name="cement_company" value={this.state.cement_company} onChange={this.onChange}>
+                                        <select class="form-control" name="cement_company" value={this.state.cement_company} onChange={this.onChange} required>
                                             <option value="">Company</option>
-                                            <option value="X">X</option>
-                                            <option value="Y">Y</option>
-                                            <option value="Z">Z</option>
-                                            <option value="P">P</option>
-                                            <option value="Q">Q</option>
+                                            <option value="PARASAKTI">PARASAKTI</option>
+                                            <option value="KCP">KCP</option>
+                                            <option value="MAHA CEMENT">MAHA CEMENT</option>
+                                            <option value="BHAVYA">BHAVYA</option>
+                                            <option value="ULTRA TECH">ULTRA TECH</option>
+                                            <option value="PENNA">PENNA</option>
+                                            <option value="INDIA CEMENT">INDIA CEMENT</option>
+                                            <option value="JUARI">JUARI</option>
 
                                         </select>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="heading">Required</td>
-                                    <td><input type="Number" name="cement_required" placeholder='No. of Bags' value={this.state.cement_required} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="cement_required" placeholder='No. of Bags' value={this.state.cement_required} onChange={this.onChange} required/></td>
                                 </tr>
                                 <tr>
                                     <td class="heading">Indent Placed</td>
-                                    <td><input type="Number" name="cement_indent_placed" placeholder='No. of Bags' value={this.state.cement_indent_placed} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="cement_indent_placed" placeholder='No. of Bags' value={this.state.cement_indent_placed} onChange={this.onChange} required/></td>
                                 </tr>
                                 <tr>
                                     <td class="heading">Received</td>
-                                    <td><input type="Number" name="cement_received" placeholder='No. of Bags' value={this.state.cement_received} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="cement_received" placeholder='No. of Bags' value={this.state.cement_received} onChange={this.onChange} required/></td>
                                 </tr>
                                 
                             </tbody>
@@ -244,15 +309,15 @@ constructor(props){
                                 
                                 <tr>
                                     <td class="heading">Required</td>
-                                    <td><input type="Number" name="sand_required" value={this.state.sand_required} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="sand_required" value={this.state.sand_required} onChange={this.onChange} required/></td>
                                 </tr>
                                 <tr>
                                     <td class="heading">Indent Placed</td>
-                                    <td><input type="Number" name="sand_indent_placed" value={this.state.sand_indent_placed} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="sand_indent_placed" value={this.state.sand_indent_placed} onChange={this.onChange} required/></td>
                                 </tr>
                                 <tr>
                                     <td class="heading">Received</td>
-                                    <td><input type="Number" name="sand_received" value={this.state.sand_received} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="sand_received" value={this.state.sand_received} onChange={this.onChange} required/></td>
                                 </tr>
                                 <tr>
                                     {/* <td class="heading">Received</td>
@@ -269,12 +334,12 @@ constructor(props){
                                 
                                 <tr>
                                     <td class="heading">Required</td>
-                                    <td><input type="Number" name="metal_required" value={this.state.metal_required} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="metal_required" value={this.state.metal_required} onChange={this.onChange} required/></td>
                                 </tr>
                                 
                                 <tr>
                                     <td class="heading">Received</td>
-                                    <td><input type="Number" name="metal_received" value={this.state.metal_received} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="metal_received" value={this.state.metal_received} onChange={this.onChange} required/></td>
                                 </tr>
                                 
                             </tbody>
@@ -287,12 +352,12 @@ constructor(props){
                                 
                                 <tr>
                                     <td class="heading">Required</td>
-                                    <td><input type="Number" name="steel_required" value={this.state.steel_required} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="steel_required" value={this.state.steel_required} onChange={this.onChange} required/></td>
                                 </tr>
                                 
                                 <tr>
                                     <td class="heading">Received</td>
-                                    <td><input type="Number" name="steel_received" value={this.state.steel_received} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="steel_received" value={this.state.steel_received} onChange={this.onChange} required/></td>
                                 </tr>
                                 
                             </tbody>
@@ -305,19 +370,19 @@ constructor(props){
                                 
                                 <tr>
                                     <td class="heading">Cement Bricks Required</td>
-                                    <td><input type="Number" name="cement_bricks_req" value={this.state.cement_bricks_req} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="cement_bricks_req" value={this.state.cement_bricks_req} onChange={this.onChange} required/></td>
                                 </tr>
                                 <tr>
                                     <td class="heading">Cement Bricks Received</td>
-                                    <td><input type="Number" name="cement_bricks_rec" value={this.state.cement_bricks_rec} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="cement_bricks_rec" value={this.state.cement_bricks_rec} onChange={this.onChange} required/></td>
                                 </tr>
                                 <tr>
                                     <td class="heading">Cley Bricks Required</td>
-                                    <td><input type="Number" name="cley_bricks_req" value={this.state.cley_bricks_req} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="cley_bricks_req" value={this.state.cley_bricks_req} onChange={this.onChange} required/></td>
                                 </tr>
                                 <tr>
                                     <td class="heading">Cley Bricks Received</td>
-                                    <td><input type="Number" name="cley_bricks_rec" value={this.state.cley_bricks_rec} onChange={this.onChange}/></td>
+                                    <td><input type="Number" name="cley_bricks_rec" value={this.state.cley_bricks_rec} onChange={this.onChange} required/></td>
                                 </tr>
                                 
                             </tbody>
@@ -341,13 +406,14 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.wb_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
                         <label htmlFor="inputaadhaar">Uploaded in the App</label>
                         <select id="uploaded" name="wb_upload" value={this.state.wb_upload}
-                        onChange={this.onChange}
-                        class="form-control">
+                        onChange={this.onChange} 
+                        class="form-control" required>
                             <option value="">Select</option>
                             <option value="YES">YES</option>
                             <option value="NO">NO</option>
@@ -357,7 +423,7 @@ constructor(props){
                     <div className="form-group col-md-3">
                         <label htmlFor="inputaadhaar">Received</label>
                         <select id="uploaded" name="wb_rec" class="form-control" value={this.state.wb_rec}
-                        onChange={this.onChange}>
+                        onChange={this.onChange} required>
                             <option value="">Select</option>
                             <option value="YES">YES</option>
                             <option value="NO">NO</option>
@@ -376,13 +442,14 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.urinals_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
                         <label htmlFor="inputaadhaar">Uploaded in the App</label>
                         <select id="uploaded" name="urinals_upload" class="form-control"
                         value={this.state.urinals_upload}
-                        onChange={this.onChange}
+                        onChange={this.onChange} required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -394,7 +461,7 @@ constructor(props){
                         <label htmlFor="inputaadhaar">Received</label>
                         <select id="uploaded" name="urinals_rec" class="form-control"
                         value={this.state.urinals_rec}
-                        onChange={this.onChange}
+                        onChange={this.onChange} required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -413,6 +480,7 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.wc_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
@@ -420,6 +488,7 @@ constructor(props){
                         <select id="uploaded" name="wc_upload" class="form-control"
                         value={this.state.wc_upload}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -432,6 +501,7 @@ constructor(props){
                         <select id="uploaded" name="wc_rec" class="form-control"
                         value={this.state.wc_rec}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -450,6 +520,7 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.fans_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
@@ -457,6 +528,7 @@ constructor(props){
                         <select id="uploaded" name="fans_upload" class="form-control"
                         value={this.state.fans_upload}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -469,6 +541,7 @@ constructor(props){
                         <select id="uploaded" name="fans_rec" class="form-control"
                         value={this.state.fans_rec}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -487,6 +560,7 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.db_class_1_3_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
@@ -494,6 +568,7 @@ constructor(props){
                         <select id="uploaded" name="db_class_1_3_upload" class="form-control"
                         value={this.state.db_class_1_3_upload}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -506,6 +581,7 @@ constructor(props){
                         <select id="uploaded" name="db_class_1_3_rec" class="form-control"
                         value={this.state.db_class_1_3_rec}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -524,6 +600,7 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.db_class_4_7_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
@@ -531,6 +608,7 @@ constructor(props){
                         <select id="uploaded" name="db_class_4_7_upload" class="form-control"
                         value={this.state.db_class_4_7_upload}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -543,6 +621,7 @@ constructor(props){
                         <select id="uploaded" name="db_class_4_7_rec" class="form-control"
                         value={this.state.db_class_4_7_rec}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -561,6 +640,7 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.db_class_7_10_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
@@ -568,6 +648,7 @@ constructor(props){
                         <select id="uploaded" name="db_class_7_10_upload" class="form-control"
                         value={this.state.db_class_7_10_upload}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -580,6 +661,7 @@ constructor(props){
                         <select id="uploaded" name="db_class_7_10_rec" class="form-control"
                         value={this.state.db_class_7_10_rec}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -598,6 +680,7 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.tables_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
@@ -605,6 +688,7 @@ constructor(props){
                         <select id="uploaded" name="tables_upload" class="form-control"
                         value={this.state.tables_upload}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -617,6 +701,7 @@ constructor(props){
                         <select id="uploaded" name="tables_rec" class="form-control"
                         value={this.state.tables_rec}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -635,6 +720,7 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.chairs_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
@@ -642,6 +728,7 @@ constructor(props){
                         <select id="uploaded" name="chairs_upload" class="form-control"
                         value={this.state.chairs_upload}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -654,6 +741,7 @@ constructor(props){
                         <select id="uploaded" name="chairs_rec" class="form-control"
                         value={this.state.chairs_rec}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -672,6 +760,7 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.almirah_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
@@ -679,6 +768,7 @@ constructor(props){
                         <select id="uploaded" name="almirah_upload" class="form-control"
                         value={this.state.almirah_upload}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -691,6 +781,7 @@ constructor(props){
                         <select id="uploaded" name="almirah_rec" class="form-control"
                         value={this.state.almirah_rec}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -709,6 +800,7 @@ constructor(props){
                     placeholder="Number Only"
                     value={this.state.chalk_board_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
@@ -716,6 +808,7 @@ constructor(props){
                         <select id="uploaded" name="chalk_board_upload" class="form-control"
                         value={this.state.chalk_board_upload}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -728,6 +821,7 @@ constructor(props){
                         <select id="uploaded" name="chalk_board_rec" class="form-control"
                         value={this.state.chalk_board_rec}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -744,8 +838,9 @@ constructor(props){
                     <input type="Number" className="form-control" id="inputcfmsid" 
                     name='tv_req'
                     placeholder="Number Only"
-                    value={this.state.tv_required}
+                    value={this.state.tv_req}
                     onChange={this.onChange}
+                    required
                     />
                     </div>
                     <div className="form-group col-md-3">
@@ -753,6 +848,7 @@ constructor(props){
                         <select id="uploaded" name="tv_upload" class="form-control"
                         value={this.state.tv_upload}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>
@@ -765,6 +861,7 @@ constructor(props){
                         <select id="uploaded" name="tv_rec" class="form-control"
                         value={this.state.tv_rec}
                         onChange={this.onChange}
+                        required
                         >
                             <option value="">Select</option>
                             <option value="YES">YES</option>

@@ -14,13 +14,13 @@ class Landing extends Component {
             <section className='landing'>
                 <div className='dark-overlay'>
                     <div className='landing-inner'>
-                        <h1 className='x-large'>Developer Connector</h1>
-                        <p className='lead'>
+                        <h1 className='x-large'>Nadu Nedu - West Godavari</h1>
+                        {/* <p className='lead'>
                             Create a developer profile/portfolio, share posts and get help from
                             other developers
-                        </p>
+                        </p> */}
                         <div className='buttons'>
-                            <Link className="btn btn-success mr-2" to="/register">SignUp</Link>
+                            {/* <Link className="btn btn-success mr-2" to="/register">SignUp</Link> */}
                             <Link className="btn btn-light" to="/login">Login</Link>
                         </div>
                     </div>

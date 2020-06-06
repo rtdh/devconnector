@@ -48,7 +48,7 @@ class Login extends Component {
             type: 'SET_CURRENT_USER',
             payload: decoded
           })
-          this.props.history.push('/dashboard')
+          this.props.history.push('/nadunedu')
 
         })
         .catch(error=>{
